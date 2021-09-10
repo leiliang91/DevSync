@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration status="info" strict="true" name="Console logging">
+    <Properties>
+        <Property name="log_level">INFO</Property>
+    </Properties>
+    <Appenders>
+        <Appender type="Console" name="Stdout">
+            <Layout type="PatternLayout">
+                <Pattern>%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n</Pattern>
+            </Layout>
+        </Appender>
+    </Appenders>
+
+    <Loggers>
+        <Root level="${log_level}">
+            <AppenderRef ref="Stdout" level="${log_level}"/>
+        </Root>
+        <Logger name="leiliang91" level="${log_level}"/>
+    </Loggers>
+</Configuration>
